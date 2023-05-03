@@ -1,0 +1,1831 @@
+<html lang="en" class="h-full bg-gray-100 k-webkit k-webkit111">
+  <head class="h-full bg-gray-100">
+    <style type="text/css">
+      .swal-icon--error {
+        border-color: #f27474;
+        -webkit-animation: animateErrorIcon 0.5s;
+        animation: animateErrorIcon 0.5s;
+      }
+      .swal-icon--error__x-mark {
+        position: relative;
+        display: block;
+        -webkit-animation: animateXMark 0.5s;
+        animation: animateXMark 0.5s;
+      }
+      .swal-icon--error__line {
+        position: absolute;
+        height: 5px;
+        width: 47px;
+        background-color: #f27474;
+        display: block;
+        top: 37px;
+        border-radius: 2px;
+      }
+      .swal-icon--error__line--left {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: 17px;
+      }
+      .swal-icon--error__line--right {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        right: 16px;
+      }
+      @-webkit-keyframes animateErrorIcon {
+        0% {
+          -webkit-transform: rotateX(100deg);
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        to {
+          -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+      @keyframes animateErrorIcon {
+        0% {
+          -webkit-transform: rotateX(100deg);
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        to {
+          -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes animateXMark {
+        0% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        50% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        80% {
+          -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+          margin-top: -6px;
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      @keyframes animateXMark {
+        0% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        50% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        80% {
+          -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+          margin-top: -6px;
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      .swal-icon--warning {
+        border-color: #f8bb86;
+        -webkit-animation: pulseWarning 0.75s infinite alternate;
+        animation: pulseWarning 0.75s infinite alternate;
+      }
+      .swal-icon--warning__body {
+        width: 5px;
+        height: 47px;
+        top: 10px;
+        border-radius: 2px;
+        margin-left: -2px;
+      }
+      .swal-icon--warning__body,
+      .swal-icon--warning__dot {
+        position: absolute;
+        left: 50%;
+        background-color: #f8bb86;
+      }
+      .swal-icon--warning__dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -4px;
+        bottom: -11px;
+      }
+      @-webkit-keyframes pulseWarning {
+        0% {
+          border-color: #f8d486;
+        }
+        to {
+          border-color: #f8bb86;
+        }
+      }
+      @keyframes pulseWarning {
+        0% {
+          border-color: #f8d486;
+        }
+        to {
+          border-color: #f8bb86;
+        }
+      }
+      .swal-icon--success {
+        border-color: #a5dc86;
+      }
+      .swal-icon--success:after,
+      .swal-icon--success:before {
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        width: 60px;
+        height: 120px;
+        background: #fff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .swal-icon--success:before {
+        border-radius: 120px 0 0 120px;
+        top: -7px;
+        left: -33px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 60px 60px;
+        transform-origin: 60px 60px;
+      }
+      .swal-icon--success:after {
+        border-radius: 0 120px 120px 0;
+        top: -11px;
+        left: 30px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 0 60px;
+        transform-origin: 0 60px;
+        -webkit-animation: rotatePlaceholder 4.25s ease-in;
+        animation: rotatePlaceholder 4.25s ease-in;
+      }
+      .swal-icon--success__ring {
+        width: 80px;
+        height: 80px;
+        border: 4px solid hsla(98, 55%, 69%, 0.2);
+        border-radius: 50%;
+        box-sizing: content-box;
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        z-index: 2;
+      }
+      .swal-icon--success__hide-corners {
+        width: 5px;
+        height: 90px;
+        background-color: #fff;
+        padding: 1px;
+        position: absolute;
+        left: 28px;
+        top: 8px;
+        z-index: 1;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      .swal-icon--success__line {
+        height: 5px;
+        background-color: #a5dc86;
+        display: block;
+        border-radius: 2px;
+        position: absolute;
+        z-index: 2;
+      }
+      .swal-icon--success__line--tip {
+        width: 25px;
+        left: 14px;
+        top: 46px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-animation: animateSuccessTip 0.75s;
+        animation: animateSuccessTip 0.75s;
+      }
+      .swal-icon--success__line--long {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: animateSuccessLong 0.75s;
+        animation: animateSuccessLong 0.75s;
+      }
+      @-webkit-keyframes rotatePlaceholder {
+        0% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        5% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        12% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+        to {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+      }
+      @keyframes rotatePlaceholder {
+        0% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        5% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        12% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+        to {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+      }
+      @-webkit-keyframes animateSuccessTip {
+        0% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        54% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        70% {
+          width: 50px;
+          left: -8px;
+          top: 37px;
+        }
+        84% {
+          width: 17px;
+          left: 21px;
+          top: 48px;
+        }
+        to {
+          width: 25px;
+          left: 14px;
+          top: 45px;
+        }
+      }
+      @keyframes animateSuccessTip {
+        0% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        54% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        70% {
+          width: 50px;
+          left: -8px;
+          top: 37px;
+        }
+        84% {
+          width: 17px;
+          left: 21px;
+          top: 48px;
+        }
+        to {
+          width: 25px;
+          left: 14px;
+          top: 45px;
+        }
+      }
+      @-webkit-keyframes animateSuccessLong {
+        0% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        65% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        84% {
+          width: 55px;
+          right: 0;
+          top: 35px;
+        }
+        to {
+          width: 47px;
+          right: 8px;
+          top: 38px;
+        }
+      }
+      @keyframes animateSuccessLong {
+        0% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        65% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        84% {
+          width: 55px;
+          right: 0;
+          top: 35px;
+        }
+        to {
+          width: 47px;
+          right: 8px;
+          top: 38px;
+        }
+      }
+      .swal-icon--info {
+        border-color: #c9dae1;
+      }
+      .swal-icon--info:before {
+        width: 5px;
+        height: 29px;
+        bottom: 17px;
+        border-radius: 2px;
+        margin-left: -2px;
+      }
+      .swal-icon--info:after,
+      .swal-icon--info:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        background-color: #c9dae1;
+      }
+      .swal-icon--info:after {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -3px;
+        top: 19px;
+      }
+      .swal-icon {
+        width: 80px;
+        height: 80px;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 50%;
+        padding: 0;
+        position: relative;
+        box-sizing: content-box;
+        margin: 20px auto;
+      }
+      .swal-icon:first-child {
+        margin-top: 32px;
+      }
+      .swal-icon--custom {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
+      }
+      .swal-icon img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .swal-title {
+        color: rgba(0, 0, 0, 0.65);
+        font-weight: 600;
+        text-transform: none;
+        position: relative;
+        display: block;
+        padding: 13px 16px;
+        font-size: 27px;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 0;
+      }
+      .swal-title:first-child {
+        margin-top: 26px;
+      }
+      .swal-title:not(:first-child) {
+        padding-bottom: 0;
+      }
+      .swal-title:not(:last-child) {
+        margin-bottom: 13px;
+      }
+      .swal-text {
+        font-size: 16px;
+        position: relative;
+        float: none;
+        line-height: normal;
+        vertical-align: top;
+        text-align: left;
+        display: inline-block;
+        margin: 0;
+        padding: 0 10px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.64);
+        max-width: calc(100% - 20px);
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+      }
+      .swal-text:first-child {
+        margin-top: 45px;
+      }
+      .swal-text:last-child {
+        margin-bottom: 45px;
+      }
+      .swal-footer {
+        text-align: right;
+        padding-top: 13px;
+        margin-top: 13px;
+        padding: 13px 16px;
+        border-radius: inherit;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      .swal-button-container {
+        margin: 5px;
+        display: inline-block;
+        position: relative;
+      }
+      .swal-button {
+        background-color: #7cd1f9;
+        color: #fff;
+        border: none;
+        box-shadow: none;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 10px 24px;
+        margin: 0;
+        cursor: pointer;
+      }
+      .swal-button:not([disabled]):hover {
+        background-color: #78cbf2;
+      }
+      .swal-button:active {
+        background-color: #70bce0;
+      }
+      .swal-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, 0.29);
+      }
+      .swal-button[disabled] {
+        opacity: 0.5;
+        cursor: default;
+      }
+      .swal-button::-moz-focus-inner {
+        border: 0;
+      }
+      .swal-button--cancel {
+        color: #555;
+        background-color: #efefef;
+      }
+      .swal-button--cancel:not([disabled]):hover {
+        background-color: #e8e8e8;
+      }
+      .swal-button--cancel:active {
+        background-color: #d7d7d7;
+      }
+      .swal-button--cancel:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(116, 136, 150, 0.29);
+      }
+      .swal-button--danger {
+        background-color: #e64942;
+      }
+      .swal-button--danger:not([disabled]):hover {
+        background-color: #df4740;
+      }
+      .swal-button--danger:active {
+        background-color: #cf423b;
+      }
+      .swal-button--danger:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(165, 43, 43, 0.29);
+      }
+      .swal-content {
+        padding: 0 20px;
+        margin-top: 20px;
+        font-size: medium;
+      }
+      .swal-content:last-child {
+        margin-bottom: 20px;
+      }
+      .swal-content__input,
+      .swal-content__textarea {
+        -webkit-appearance: none;
+        background-color: #fff;
+        border: none;
+        font-size: 14px;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.14);
+        padding: 10px 13px;
+        border-radius: 2px;
+        transition: border-color 0.2s;
+      }
+      .swal-content__input:focus,
+      .swal-content__textarea:focus {
+        outline: none;
+        border-color: #6db8ff;
+      }
+      .swal-content__textarea {
+        resize: vertical;
+      }
+      .swal-button--loading {
+        color: transparent;
+      }
+      .swal-button--loading ~ .swal-button__loader {
+        opacity: 1;
+      }
+      .swal-button__loader {
+        position: absolute;
+        height: auto;
+        width: 43px;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        pointer-events: none;
+        opacity: 0;
+      }
+      .swal-button__loader div {
+        display: inline-block;
+        float: none;
+        vertical-align: baseline;
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border: none;
+        margin: 2px;
+        opacity: 0.4;
+        border-radius: 7px;
+        background-color: hsla(0, 0%, 100%, 0.9);
+        transition: background 0.2s;
+        -webkit-animation: swal-loading-anim 1s infinite;
+        animation: swal-loading-anim 1s infinite;
+      }
+      .swal-button__loader div:nth-child(3n + 2) {
+        -webkit-animation-delay: 0.15s;
+        animation-delay: 0.15s;
+      }
+      .swal-button__loader div:nth-child(3n + 3) {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+      }
+      @-webkit-keyframes swal-loading-anim {
+        0% {
+          opacity: 0.4;
+        }
+        20% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.4;
+        }
+      }
+      @keyframes swal-loading-anim {
+        0% {
+          opacity: 0.4;
+        }
+        20% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.4;
+        }
+      }
+      .swal-overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 0;
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 10000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .swal-overlay:before {
+        content: " ";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      }
+      .swal-overlay--show-modal {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .swal-overlay--show-modal .swal-modal {
+        opacity: 1;
+        pointer-events: auto;
+        box-sizing: border-box;
+        -webkit-animation: showSweetAlert 0.3s;
+        animation: showSweetAlert 0.3s;
+        will-change: transform;
+      }
+      .swal-modal {
+        width: 478px;
+        opacity: 0;
+        pointer-events: none;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        position: static;
+        margin: 20px auto;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        z-index: 10001;
+        transition: opacity 0.2s, -webkit-transform 0.3s;
+        transition: transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
+      }
+      @media (max-width: 500px) {
+        .swal-modal {
+          width: calc(100% - 20px);
+        }
+      }
+      @-webkit-keyframes showSweetAlert {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        1% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        45% {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+        80% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      @keyframes showSweetAlert {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        1% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        45% {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+        80% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <!-- Gill Sans -->
+    <link href="https://fonts.cdnfonts.com/css/gill-sans" rel="stylesheet" />
+    <!-- Core theme TailwindCSS-->
+    <link rel="stylesheet" href="./css/interior.css" />
+    <!-- Core theme CSS-->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Dashboard - OneTeam Admin</title>
+
+    <style type="text/css">
+      @font-face {
+        font-weight: 400;
+        font-style: normal;
+        font-family: circular;
+
+        src: url("chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Regular.woff2")
+          format("woff2");
+      }
+
+      @font-face {
+        font-weight: 500;
+        font-style: normal;
+        font-family: circular;
+
+        src: url("chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Medium.woff2")
+          format("woff2");
+      }
+
+      @font-face {
+        font-weight: 700;
+        font-style: normal;
+        font-family: circular;
+
+        src: url("chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2")
+          format("woff2");
+      }
+
+      @font-face {
+        font-weight: 900;
+        font-style: normal;
+        font-family: circular;
+
+        src: url("chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Black.woff2")
+          format("woff2");
+      }
+    </style>
+  </head>
+  <body
+    class="h-full bg-[url('/Interior/images/blue-stars-bg.jpg')] bg-auto"
+    data-new-gr-c-s-check-loaded="14.1104.0"
+    data-gr-ext-installed=""
+  >
+    <!-- Navbar -->
+    <nav
+      class="flex flex-col bg-federal-blue md:flex-row md:items-center fixed top-0 z-20 w-full xs:px-4 md:px-5 lg:px-8 py-3 justify-between"
+    >
+      <!-- Flex Container -->
+      <div
+        class="flex md:justify-around xs:justify-between gap-x-2 items-center lg:w-2/5 md:w-4/12"
+      >
+        <!-- Link Direct to Home Page -->
+        <div class="flex flex-row lg:gap-3">
+          <!-- Image Logo -->
+          <div class="lg:basis-16 xs:basis-11">
+            <a href="index.html">
+              <img src="images/navbar-logo.png" alt="Image of the OTTA logo" />
+            </a>
+          </div>
+          <!-- ONE TEAM TALENT AGENCY -->
+          <div class="flex justify-center items-center">
+            <a
+              href="index.html"
+              class="xl:text-2xl lg:text-lg xs:text-sm pt-2 flex items-center text-white-gold font-medium font-gill-sans"
+            >
+              ONE TEAM TALENT AGENCY
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Links -->
+      <ul
+        class="hidden justify-end items-center lg:gap-x-7 xs:gap-x-3 lg:gap-y-10 mt-5 sm:mt-0 text-white font-sans lg:w-4/5 2xl:text-base xl:text-base lg:text-xs md:text-xs font-bold"
+        id="links"
+      >
+        <li>
+          <button
+            onclick="document.signOutForm.submit(); return false;"
+            class="text-white hover:text-sonic-silver hover:underline"
+          >
+            Logout
+          </button>
+        </li>
+        <span>|</span>
+        <li>
+          <a
+            href="#"
+            class="hover:text-sonic-silver hover:underline 2xl:pr-10 xl:pr-1"
+            >Account Settings</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <!-- Body -->
+    <div
+      b-tqney8pgqj=""
+      x-data="{ isOffCanvasOpen: false }"
+      class=""
+    >
+      <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+      <div
+        b-tqney8pgqj=""
+        x-show="isOffCanvasOpen"
+        class="relative z-40 md:hidden"
+        role="dialog"
+        aria-modal="true"
+        style="display: none"
+      >
+        <!--
+              Off-canvas menu backdrop, show/hide based on off-canvas menu state.
+
+              Entering: "transition-opacity ease-linear duration-300"
+                From: "opacity-0"
+                To: "opacity-100"
+              Leaving: "transition-opacity ease-linear duration-300"
+                From: "opacity-100"
+                To: "opacity-0"
+            -->
+        <div
+          b-tqney8pgqj=""
+          x-show="isOffCanvasOpen"
+          x-transition:enter="transition-opacity ease-linear duration-300"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition-opacity ease-linear duration-300"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="fixed inset-0 bg-gray-600 bg-opacity-75"
+          style="display: none"
+        ></div>
+
+        <div b-tqney8pgqj="" class="fixed inset-0 flex z-40">
+          <!--
+                  Off-canvas menu, show/hide based on off-canvas menu state.
+
+                  Entering: "transition ease-in-out duration-300 transform"
+                    From: "-translate-x-full"
+                    To: "translate-x-0"
+                  Leaving: "transition ease-in-out duration-300 transform"
+                    From: "translate-x-0"
+                    To: "-translate-x-full"
+                -->
+          <div
+            b-tqney8pgqj=""
+            x-show="isOffCanvasOpen"
+            x-transition:enter="transition ease-in-out duration-300 transform"
+            x-transition:enter-start="-translate-x-full"
+            x-transition:enter-end="translate-x-0"
+            x-transition:leave="transition ease-in-out duration-300 transform"
+            x-transition:leave-start="translate-x-0"
+            x-transition:leave-end="-translate-x-full"
+            class="relative flex-1 flex flex-col max-w-xs w-full bg-white"
+            style="display: none"
+          >
+            <!--
+                      Close button, show/hide based on off-canvas menu state.
+
+                      Entering: "ease-in-out duration-300"
+                        From: "opacity-0"
+                        To: "opacity-100"
+                      Leaving: "ease-in-out duration-300"
+                        From: "opacity-100"
+                        To: "opacity-0"
+                    -->
+            <div
+              b-tqney8pgqj=""
+              x-show="isOffCanvasOpen"
+              x-transition:enter="ease-in-out duration-300"
+              x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100"
+              x-transition:leave="ease-in-out duration-300"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+              class="absolute top-0 right-0 -mr-12 pt-2"
+              style="display: none"
+            >
+              <button
+                b-tqney8pgqj=""
+                type="button"
+                @click="isOffCanvasOpen = false"
+                class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              >
+                <span b-tqney8pgqj="" class="sr-only">Close sidebar</span>
+                <!-- Heroicon name: outline/x -->
+                <svg
+                  b-tqney8pgqj=""
+                  class="h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    b-tqney8pgqj=""
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+
+            <div b-tqney8pgqj="" class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+              <nav b-tqney8pgqj="" class="mt-5 px-2 space-y-1">
+                <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+                <a
+                  class="sidebar-mobile-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                  href="/"
+                >
+                  <!--
+                                  Heroicon name: outline/home
+
+                                  Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500"
+                                -->
+                  <svg
+                    b-tqney8pgqj=""
+                    class="mr-4 flex-shrink-0 h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      b-tqney8pgqj=""
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                    ></path>
+                  </svg>
+                  Dashboard
+                </a>
+
+                <a
+                  class="sidebar-mobile-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                  href="/Studios"
+                >
+                  <!-- Heroicon name: outline/folder -->
+                  <svg
+                    b-tqney8pgqj=""
+                    class="mr-4 flex-shrink-0 h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      b-tqney8pgqj=""
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                    ></path>
+                  </svg>
+                  Manage employers
+                </a>
+
+                <a
+                  class="sidebar-mobile-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                  href="/Invite?userType=Studio"
+                >
+                  <!-- Heroicon name: outline/calendar -->
+                  <svg
+                    b-tqney8pgqj=""
+                    class="mr-4 flex-shrink-0 h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      b-tqney8pgqj=""
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                  Invite employer user
+                </a>
+
+                <a
+                  class="sidebar-mobile-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                  href="/Members"
+                >
+                  <!-- Heroicon name: outline/inbox -->
+                  <svg
+                    b-tqney8pgqj=""
+                    class="mr-4 flex-shrink-0 h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      b-tqney8pgqj=""
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+                    ></path>
+                  </svg>
+                  Member accounts
+                </a>
+
+                <a
+                  class="sidebar-mobile-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                  href="/Studios"
+                >
+                  <!-- Heroicon name: outline/chart-bar -->
+                  <svg
+                    b-tqney8pgqj=""
+                    class="mr-4 flex-shrink-0 h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      b-tqney8pgqj=""
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    ></path>
+                  </svg>
+                  Employer accounts
+                </a>
+
+                <a
+                  class="sidebar-mobile-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                  href="/EditContentPage"
+                >
+                  <!-- Heroicon name: outline/folder -->
+                  <svg
+                    b-tqney8pgqj=""
+                    class="mr-4 flex-shrink-0 h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      b-tqney8pgqj=""
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                    ></path>
+                  </svg>
+                  Content management
+                </a>
+
+                <a
+                  class="sidebar-mobile-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                  href="/Config"
+                >
+                  <!-- Heroicon name: outline/folder -->
+                  <svg
+                    b-tqney8pgqj=""
+                    class="mr-4 flex-shrink-0 h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      b-tqney8pgqj=""
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                    ></path>
+                  </svg>
+                  System Settings
+                </a>
+
+                <a
+                  class="sidebar-mobile-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                  href="/SystemData"
+                >
+                  <!-- Heroicon name: outline/folder -->
+                  <svg
+                    b-tqney8pgqj=""
+                    class="mr-4 flex-shrink-0 h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      b-tqney8pgqj=""
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                    ></path>
+                  </svg>
+                  System Data
+                </a>
+              </nav>
+            </div>
+            <div
+              b-tqney8pgqj=""
+              class="flex-shrink-0 flex border-t border-gray-200 p-4"
+            >
+              <a b-tqney8pgqj="" href="#" class="flex-shrink-0 group block">
+                <div b-tqney8pgqj="" class="flex items-center">
+                  <div b-tqney8pgqj="">
+                    <span
+                      b-tqney8pgqj=""
+                      class="inline-flex items-center justify-center h-10 w-10 rounded-full bg-federal-blue"
+                    >
+                      <span
+                        b-tqney8pgqj=""
+                        class="font-thin leading-none text-white text-xl"
+                        >PM</span
+                      >
+                    </span>
+                  </div>
+
+                  <div b-tqney8pgqj="" class="ml-3">
+                    <p
+                      b-tqney8pgqj=""
+                      class="text-2xl font-semibold text-federal-blue group-hover:text-gray-900font-gill-sans"
+                    >
+                      Paul Martin
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div b-tqney8pgqj="" class="flex-shrink-0 w-14">
+            <!-- Force sidebar to shrink to fit close icon -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Static sidebar for desktop -->
+      <div
+        b-tqney8pgqj=""
+        class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0 pt-16"
+      >
+        <!-- Sidebar component, swap this element with another sidebar if you like -->
+        <div
+          b-tqney8pgqj=""
+          x-data="{ open: false }"
+          class="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white"
+        >
+          <div
+            b-tqney8pgqj=""
+            class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto"
+          >
+            <nav
+              b-tqney8pgqj=""
+              class="mt-5 flex-1 px-2 bg-white space-y-1 font-semibold"
+            >
+              <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+
+              <a
+                class="sidebar-desktop-link group sidebar-desktop-link active text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                href="/"
+              >
+                <!--
+                Heroicon name: outline/home
+
+                Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500"
+            -->
+                <svg
+                  b-tqney8pgqj=""
+                  class="mr-3 flex-shrink-0 h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    b-tqney8pgqj=""
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  ></path>
+                </svg>
+                Dashboard
+              </a>
+
+              <a
+                class="sidebar-desktop-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                href="/Studios"
+              >
+                <!-- Heroicon name: outline/folder -->
+                <svg
+                  b-tqney8pgqj=""
+                  class="mr-3 flex-shrink-0 h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    b-tqney8pgqj=""
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                  ></path>
+                </svg>
+                Manage employers
+              </a>
+
+              <a
+                class="sidebar-desktop-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                href="/Invite?userType=Studio"
+              >
+                <!-- Heroicon name: outline/calendar -->
+                <svg
+                  b-tqney8pgqj=""
+                  class="mr-3 flex-shrink-0 h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    b-tqney8pgqj=""
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                Invite employer user
+              </a>
+
+              <a
+                class="sidebar-desktop-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                href="/Members"
+              >
+                <!-- Heroicon name: outline/inbox -->
+                <svg
+                  b-tqney8pgqj=""
+                  class="mr-3 flex-shrink-0 h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    b-tqney8pgqj=""
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+                  ></path>
+                </svg>
+                Member accounts
+              </a>
+
+              <a
+                class="sidebar-desktop-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                href="/StudioAccounts"
+              >
+                <!-- Heroicon name: outline/chart-bar -->
+                <svg
+                  b-tqney8pgqj=""
+                  class="mr-3 flex-shrink-0 h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    b-tqney8pgqj=""
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  ></path>
+                </svg>
+                Employer accounts
+              </a>
+
+              <a
+                class="sidebar-desktop-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                href="/EditContentPage"
+              >
+                <!-- Heroicon name: outline/folder -->
+                <svg
+                  b-tqney8pgqj=""
+                  class="mr-3 flex-shrink-0 h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    b-tqney8pgqj=""
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                  ></path>
+                </svg>
+                Content management
+              </a>
+
+              <a
+                class="sidebar-desktop-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                href="/Config"
+              >
+                <!-- Heroicon name: outline/folder -->
+                <svg
+                  b-tqney8pgqj=""
+                  class="mr-3 flex-shrink-0 h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    b-tqney8pgqj=""
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                  ></path>
+                </svg>
+                System Settings
+              </a>
+
+              <a
+                class="sidebar-desktop-link group text-federal-blue rounded-xl flex flex-row hover:bg-federal-blue hover:text-white px-2 py-3"
+                href="/SystemData"
+              >
+                <!-- Heroicon name: outline/folder -->
+                <svg
+                  b-tqney8pgqj=""
+                  class="0 mr-3 flex-shrink-0 h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    b-tqney8pgqj=""
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                  ></path>
+                </svg>
+                System Data
+              </a>
+            </nav>
+          </div>
+
+          <div
+            b-tqney8pgqj=""
+            class="flex-shrink-0 flex border-t border-gray-200 p-4"
+          >
+            <button
+              b-tqney8pgqj=""
+              @click="open = !open"
+              type="button"
+              class="flex-shrink-0 w-full group block"
+            >
+              <div b-tqney8pgqj="" class="flex items-center">
+                <div b-tqney8pgqj="">
+                  <span
+                    b-tqney8pgqj=""
+                    class="inline-flex items-center justify-center h-10 w-10 rounded-full bg-federal-blue"
+                  >
+                    <span
+                      b-tqney8pgqj=""
+                      class="font-thin leading-none text-white text-xl"
+                      >PM</span
+                    >
+                  </span>
+                </div>
+                <div b-tqney8pgqj="" class="ml-3">
+                  <p
+                    b-tqney8pgqj=""
+                    class="text-2xl font-semibold text-federal-blue font-gill-sans group-hover:text-gray-900"
+                  >
+                    Paul Martin
+                  </p>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <div
+            b-tqney8pgqj=""
+            x-show="open"
+            class="origin-top-right absolute left-1 bottom-16 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabindex="-1"
+            style="display: none"
+          >
+            <div b-tqney8pgqj="" class="px-4 py-3" role="none">
+              <p b-tqney8pgqj="" class="text-sm" role="none">Signed in as</p>
+              <p
+                b-tqney8pgqj=""
+                class="text-sm font-medium text-gray-900 truncate"
+                role="none"
+              >
+                abc@apple.io
+              </p>
+            </div>
+            <div b-tqney8pgqj="" class="py-1" role="none">
+              <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-federal-blue" -->
+              <a
+                b-tqney8pgqj=""
+                href="/"
+                class="text-federal-blue block px-4 py-2 text-sm"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-item-0"
+                >Account settings</a
+              >
+            </div>
+            <div b-tqney8pgqj="" class="py-1" role="none">
+              <form method="post" action="SignOut" role="none">
+                <button
+                  b-tqney8pgqj=""
+                  type="submit"
+                  class="text-federal-blue block w-full text-left px-4 py-2 text-sm"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Sign out
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Container-->
+      <div b-tqney8pgqj="" class=" md:pl-64 flex flex-col flex-1 h-full">
+        <!-- Sidebar Icon -->
+        <div
+          b-tqney8pgqj=""
+          class="sticky top-0 z-10 md:hidden pt-1 sm:pl-3 sm:pt-3 bg-transparent md:bg-white"
+        >
+          <button
+            b-tqney8pgqj=""
+            type="button"
+            @click="isOffCanvasOpen = true"
+            class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-white hover:text-white-gold focus:outline-none focus:ring-2 focus:ring-inset focus:ring-dark-gold absolute top-0 left-0"
+          >
+            <span b-tqney8pgqj="" class="sr-only">Open sidebar</span>
+            <!-- Heroicon name: outline/menu -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+            </svg> 
+          </button>
+        </div>
+        <!-- Main Content -->
+        <main b-tqney8pgqj="" class="flex-1 bg-[url('/Interior/images/blue-stars-bg.jpg')] bg-auto">
+          <div b-tqney8pgqj="" class="py-6">
+            <div b-tqney8pgqj="" class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+              <div class="pt-5 md:flex md:items-center md:justify-between">
+                <div class="min-w-0 flex-1">
+                  <h2
+                    class="text-2xl font-thin leading-7 text-white sm:truncate sm:text-3xl sm:tracking-tight font-gill-sans"
+                  >
+                    Invite Member
+                  </h2>
+                </div>
+                <div class="mt-4 flex md:mt-0 md:ml-4">
+                  <button
+                    id="submitButton"
+                    type="button"
+                    class="inline-flex items-center rounded-md border border-dark-gold bg-white-gold px-4 py-2 text-sm font-medium text-dark-gold hover:text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-dark-gold focus:ring-offset-2"
+                  >
+                    Invite Member
+                  </button>
+                </div>
+              </div>
+
+              <form
+                method="post"
+                class="py-2 px-3 mt-8 space-y-2 bg-white rounded-xl"
+                id="inviteMemberForm"
+                novalidate="novalidate"
+              >
+                <div>
+                    <h2 class="text-federal-blue font-bold text-lg">User Information</h2>
+                </div>
+                <div class="border-b-2 border-gray-200 pb-4">
+                    <div>
+
+                      <p class="text-sm text-gray-500">
+                        The user will receive a registration link via email.
+                      </p>
+                    </div>
+                </div>
+
+                <div class="space-y-8 divide-y divide-gray-200">
+                  <div class="pt-1">
+                    <div
+                      class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-8"
+                    >
+                      <input
+                        type="hidden"
+                        value="0"
+                        data-val="true"
+                        data-val-required="Studio is required"
+                        id="Invite_StudioId"
+                        name="Invite.StudioId"
+                      />
+                    </div>
+                    <div
+                      class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-8"
+                    >
+                      <div class="sm:col-span-3">
+                        <label
+                          class="block text-sm font-bold text-federal-blue"
+                          for="Invite_FullName"
+                          >Full name</label
+                        >
+                        <div class="mt-1">
+                          <input
+                            type="text"
+                            autocomplete="none"
+                            class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            data-val="true"
+                            data-val-required="Full name is required"
+                            id="Invite_FullName"
+                            name="Invite.FullName"
+                            value=""
+                          />
+                        </div>
+
+                        <div
+                          class="field-error-alert-div mt-4 rounded-md bg-red-50 p-4"
+                        >
+                          <div class="flex">
+                            <div class="flex-shrink-0">
+                              <!-- Heroicon name: mini/x-circle -->
+                              <svg
+                                class="h-5 w-5 text-red-400"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div class="ml-3">
+                              <h3 class="text-sm font-medium text-red-800">
+                                <span
+                                  class="field-validation-valid"
+                                  data-valmsg-for="Invite.FullName"
+                                  data-valmsg-replace="true"
+                                ></span>
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="sm:col-span-2">
+                        <label
+                          class="block text-sm font-bold text-federal-blue"
+                          for="Invite_EmailAddress"
+                          >Email address</label
+                        >
+                        <div class="mt-1">
+                          <input
+                            type="email"
+                            autocomplete="none"
+                            class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            data-val="true"
+                            data-val-email="Invalid email address"
+                            data-val-required="Email address is required"
+                            id="Invite_EmailAddress"
+                            name="Invite.EmailAddress"
+                            value=""
+                          />
+                        </div>
+
+                        <div
+                          class="field-error-alert-div mt-4 rounded-md bg-red-50 p-4"
+                        >
+                          <div class="flex">
+                            <div class="flex-shrink-0">
+                              <!-- Heroicon name: mini/x-circle -->
+                              <svg
+                                class="h-5 w-5 text-red-400"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div class="ml-3">
+                              <h3 class="text-sm font-medium text-red-800">
+                                <span
+                                  class="field-validation-valid"
+                                  data-valmsg-for="Invite.EmailAddress"
+                                  data-valmsg-replace="true"
+                                ></span>
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <input
+                  type="hidden"
+                  data-val="true"
+                  data-val-required="The UserType field is required."
+                  id="Invite_UserType"
+                  name="Invite.UserType"
+                  value="Member"
+                />
+
+                <input
+                  name="__RequestVerificationToken"
+                  type="hidden"
+                  value="CfDJ8NiLLFymghVPvSx63budAdldsaa8COL2RPdsrXtHuPor1altw04cjogrpiFmF5i-heL-5g4cD0Vym2Cm1oUUogfLVPgjU32Cpn_MnxF70C3UoszcyLENIo-KikfQat68a0KdZNTzAi8LdoUUnNFrWMKMEHNcxhclEXpVK2GtUmhck9XZGRyoIllMAZn_6oeP-A"
+                />
+              </form>
+            </div>
+          </div>
+
+        </main>
+        <!-- Footer -->
+        <footer
+          class="font-gill-sans text-white bg-federal-blue font-thin w-full"
+        >
+          <!-- Footer Logo Image -->
+          <div class="pt-6">
+            <a href="#" class="flex justify-center items-center">
+              <img
+                src="images/footer-logo.png"
+                alt="Image of OTTA logo"
+                class="h-16 w-auto"
+              />
+            </a>
+          </div>
+          <!-- Flex Container -->
+          <div
+            class="flex xl:flex-row xs:flex-col justify-center items-center px-6 py-5 mx-auto gap-4"
+            aria-label="Footer"
+          >
+            <!-- Navigation Links -->
+            <ul
+              class="flex flex-row gap-4 text-white-gold lg:text-lg xs:text-base text-center"
+            >
+              <!-- Contact Links -->
+              <li>
+                <a
+                  href="contact.html"
+                  class="hover:text-sonic-silver hover:cursor-pointer"
+                  >Contact</a
+                >
+              </li>
+              <span>|</span>
+              <!-- Terms of Use -->
+              <li class="text-center">
+                <a
+                  href="terms-of-use.html"
+                  class="hover:text-sonic-silver hover:cursor-pointer"
+                  >Terms of Use</a
+                >
+              </li>
+              <span>|</span>
+              <!-- Privacy Link -->
+              <li>
+                <a
+                  href="privacy.html"
+                  class="hover:text-sonic-silver hover:cursor-pointer"
+                  >Privacy</a
+                >
+              </li>
+              <span>|</span>
+              <!-- Faq -->
+              <li>
+                <a
+                  href="faq.html"
+                  class="hover:text-sonic-silver hover:cursor-pointer"
+                  >FAQ</a
+                >
+              </li>
+              <span class="xl:block xs:hidden">|</span>
+            </ul>
+            <!-- Socials -->
+            <ul class="flex flex-row gap-4">
+              <!-- Facebook -->
+              <li>
+                <a href="" aria-label="Facebook">
+                  <svg
+                    class="w-6 h-6 text-sonic-silver fill-current hover:cursor-pointer"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <!-- Instagram -->
+              <li>
+                <a href="#" aria-label="Instagram">
+                  <svg
+                    class="h-6 w-6 text-sonic-silver fill-current hover:cursor-pointer"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+              <!-- Twitter -->
+              <li>
+                <a href="#" aria-label="Twitter">
+                  <svg
+                    class="w-6 h-6 text-sonic-silver fill-current hover:cursor-pointer"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+            <!-- Copyright -->
+            <div
+              class="text-center text-white-gold flex flex-row lg:text-lg xs:text-base gap-4"
+            >
+              <span class="xl:block xs:hidden">|</span>
+              <p>
+                &copy; 2023 One Team Talent Agency, Inc. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

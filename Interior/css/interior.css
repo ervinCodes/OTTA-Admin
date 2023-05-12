@@ -1255,6 +1255,10 @@ body::before {
   background-image: url('//images/blue-stars-background.jpg');
 }
 
+.bg-\[url\(\'\/images\/blue-stars-backbround\.jpg\'\)\] {
+  background-image: url('/images/blue-stars-backbround.jpg');
+}
+
 .bg-auto {
   background-size: auto;
 }

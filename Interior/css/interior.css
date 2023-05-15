@@ -686,6 +686,10 @@ body::before {
   margin-top: -0.125rem;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -948,6 +952,10 @@ body::before {
   flex-direction: column-reverse;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
@@ -1123,6 +1131,10 @@ body::before {
   border-width: 1px;
 }
 
+.border-b {
+  border-bottom-width: 1px;
+}
+
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -1227,36 +1239,20 @@ body::before {
   --tw-bg-opacity: 0.75;
 }
 
-.bg-\[url\(\'\/Interior\/images\/blue-stars-bg\.jpg\'\)\] {
-  background-image: url('/Interior/images/blue-stars-bg.jpg');
+.bg-\[url\(\'\/Interior\/images\/blue-button\.png\'\)\] {
+  background-image: url('/Interior/images/blue-button.png');
 }
 
 .bg-\[url\(\'\/images\/blue-button\.png\'\)\] {
   background-image: url('/images/blue-button.png');
 }
 
-.bg-\[url\(\'\/images\/blue-stars-bg\.jpg\'\)\] {
-  background-image: url('/images/blue-stars-bg.jpg');
-}
-
-.bg-\[url\(\'\/Interior\/images\/blue-stars-background\.jpg\'\)\] {
-  background-image: url('/Interior/images/blue-stars-background.jpg');
-}
-
 .bg-\[url\(\'\/images\/blue-stars-background\.jpg\'\)\] {
   background-image: url('/images/blue-stars-background.jpg');
 }
 
-.bg-\[url\(\'Interior\/images\/blue-stars-background\.jpg\'\)\] {
-  background-image: url('Interior/images/blue-stars-background.jpg');
-}
-
-.bg-\[url\(\'\/\/images\/blue-stars-background\.jpg\'\)\] {
-  background-image: url('//images/blue-stars-background.jpg');
-}
-
-.bg-\[url\(\'\/images\/blue-stars-backbround\.jpg\'\)\] {
-  background-image: url('/images/blue-stars-backbround.jpg');
+.bg-\[url\(\'\/images\/blue-stars-bg\.jpg\'\)\] {
+  background-image: url('/images/blue-stars-bg.jpg');
 }
 
 .bg-auto {
@@ -1819,6 +1815,11 @@ body::before {
   background-color: rgb(30 64 175 / var(--tw-bg-opacity));
 }
 
+.group:hover .group-hover\:bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
 .group:hover .group-hover\:text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1887,6 +1888,10 @@ body::before {
 
   .sm\:mt-0 {
     margin-top: 0px;
+  }
+
+  .sm\:table-cell {
+    display: table-cell;
   }
 
   .sm\:w-1\/2 {

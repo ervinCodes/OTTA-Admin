@@ -1235,12 +1235,13 @@ body::before {
   background-color: rgb(180 159 113 / var(--tw-bg-opacity));
 }
 
-.bg-opacity-75 {
-  --tw-bg-opacity: 0.75;
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/Interior\/images\/blue-button\.png\'\)\] {
-  background-image: url('/Interior/images/blue-button.png');
+.bg-opacity-75 {
+  --tw-bg-opacity: 0.75;
 }
 
 .bg-\[url\(\'\/images\/blue-button\.png\'\)\] {
@@ -1253,6 +1254,10 @@ body::before {
 
 .bg-\[url\(\'\/images\/blue-stars-bg\.jpg\'\)\] {
   background-image: url('/images/blue-stars-bg.jpg');
+}
+
+.bg-\[url\(\'\/Interior\/images\/blue-button\.png\'\)\] {
+  background-image: url('/Interior/images/blue-button.png');
 }
 
 .bg-auto {
@@ -1469,6 +1474,11 @@ body::before {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -2124,6 +2134,10 @@ body::before {
 
   .lg\:w-4\/5 {
     width: 80%;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:max-w-7xl {

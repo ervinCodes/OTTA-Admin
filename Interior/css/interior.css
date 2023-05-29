@@ -762,6 +762,10 @@ body::before {
   margin-top: 2rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -1012,6 +1016,10 @@ body::before {
   gap: 1.5rem;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -1115,6 +1123,10 @@ body::before {
 
 .self-center {
   align-self: center;
+}
+
+.overflow-auto {
+  overflow: auto;
 }
 
 .overflow-hidden {
@@ -1295,6 +1307,10 @@ body::before {
   --tw-bg-opacity: 0.75;
 }
 
+.bg-\[url\(\'\/Interior\/images\/blue-button\.png\'\)\] {
+  background-image: url('/Interior/images/blue-button.png');
+}
+
 .bg-\[url\(\'\/images\/blue-button\.png\'\)\] {
   background-image: url('/images/blue-button.png');
 }
@@ -1305,6 +1321,18 @@ body::before {
 
 .bg-\[url\(\'\/images\/blue-stars-bg\.jpg\'\)\] {
   background-image: url('/images/blue-stars-bg.jpg');
+}
+
+.bg-\[url\(\'\/interior\/images\/blue-button\.png\'\)\] {
+  background-image: url('/interior/images/blue-button.png');
+}
+
+.bg-\[url\(\'\/Interior\/images\/silver\.png\'\)\] {
+  background-image: url('/Interior/images/silver.png');
+}
+
+.bg-\[url\(\'\/images\/silver\.png\'\)\] {
+  background-image: url('/images/silver.png');
 }
 
 .bg-auto {
@@ -1477,6 +1505,10 @@ body::before {
   padding-top: 0.5rem;
 }
 
+.pt-4 {
+  padding-top: 1rem;
+}
+
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -1489,8 +1521,12 @@ body::before {
   padding-top: 2rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
 }
 
 .text-left {
@@ -1650,6 +1686,11 @@ body::before {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
 .text-red-400 {
   --tw-text-opacity: 1;
   color: rgb(248 113 113 / var(--tw-text-opacity));
@@ -1673,11 +1714,6 @@ body::before {
 .text-white-gold {
   --tw-text-opacity: 1;
   color: rgb(180 159 113 / var(--tw-text-opacity));
-}
-
-.text-indigo-600 {
-  --tw-text-opacity: 1;
-  color: rgb(79 70 229 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1810,6 +1846,11 @@ body::before {
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
+.hover\:text-blue-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
 .hover\:text-blue-900:hover {
   --tw-text-opacity: 1;
   color: rgb(30 58 138 / var(--tw-text-opacity));
@@ -1838,11 +1879,6 @@ body::before {
 .hover\:text-white-gold:hover {
   --tw-text-opacity: 1;
   color: rgb(180 159 113 / var(--tw-text-opacity));
-}
-
-.hover\:text-blue-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -1982,6 +2018,11 @@ body::before {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  .xs\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
 @media (min-width: 640px) {
@@ -2101,6 +2142,10 @@ body::before {
     padding-top: 0.75rem;
   }
 
+  .sm\:pb-0 {
+    padding-bottom: 0px;
+  }
+
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -2121,9 +2166,21 @@ body::before {
     position: fixed;
   }
 
+  .md\:absolute {
+    position: absolute;
+  }
+
   .md\:inset-y-0 {
     top: 0px;
     bottom: 0px;
+  }
+
+  .md\:right-0 {
+    right: 0px;
+  }
+
+  .md\:top-3 {
+    top: 0.75rem;
   }
 
   .md\:mx-0 {
@@ -2302,14 +2359,14 @@ body::before {
     padding-right: 2.75rem;
   }
 
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .lg\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .lg\:text-lg {
@@ -2326,6 +2383,14 @@ body::before {
 @media (min-width: 1280px) {
   .xl\:mt-1 {
     margin-top: 0.25rem;
+  }
+
+  .xl\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .xl\:mt-5 {
+    margin-top: 1.25rem;
   }
 
   .xl\:block {

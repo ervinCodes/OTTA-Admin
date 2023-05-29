@@ -1532,294 +1532,1050 @@
         <main b-tqney8pgqj="" class="flex-1">
             <div b-tqney8pgqj="" class="py-6">
               <div b-tqney8pgqj="" class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-                <div class="pt-5 md:flex md:items-center md:justify-between">
-                  <div class="min-w-0 flex-1">
+                <div class="relative pt-5 pb-5 border-b border-gray-200 sm:pb-0">
+                  <div class="md:flex md:items-center md:justify-between">
                     <h2
-                      class="text-2xl font-thin leading-7 text-white font-gill-sans sm:truncate sm:text-3xl sm:tracking-tight"
+                      class="text-2xl font-thin leading-7 text-white sm:truncate sm:text-3xl sm:tracking-tight"
                     >
-                      Invite Employer User
+                      Content Management
                     </h2>
-                  </div>
-                  <div class="mt-4 flex md:mt-0 md:ml-4">
-                    <button
-                      id="submitButton"
-                      type="button"
-                      class="inline-flex items-center rounded-md border border-dark-gold bg-white-gold px-4 py-2 text-sm font-medium text-dark-gold hover:text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-dark-gold focus:ring-offset-2"
+                    <div
+                      class="mt-3 flex md:mt-0 md:absolute md:top-3 md:right-0"
                     >
-                      Send Invitation
-                    </button>
+                      <button
+                        id="saveButton"
+                        type="button"
+                        class="inline-flex items-center rounded-md border border-dark-gold bg-white-gold px-4 py-2 text-sm font-medium text-dark-gold hover:text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-dark-gold focus:ring-offset-2"
+                      >
+                        Send Invitation
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mt-4">
+                    <div>
+                      <label for="currentPage" class="sr-only">Select page</label>
+                      <select
+                        id="currentPage"
+                        name="current-tab"
+                        class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                      >
+                        <option value="Home" selected="">Home</option>
+                        <option value="NewsEvents">FAQ</option>
+                        <option value="Congrats">Credits</option>
+                        <option value="OurIndustry">Our Industry</option>
+                        <option value="InMemoryOf">In Memorium</option>
+                        <option value="AboutUs">About Us</option>
+                        <option value="Bio">Bio</option>
+                        <option value="Privacy">Privacy</option>
+                        <option value="TermsOfUse">Terms of Use</option>
+                        <option value="TemplatesForms">
+                          Templates, Forms, Essentials
+                        </option>
+                        <option value="OffersDiscounts">
+                          Offers &amp; Discounts
+                        </option>
+                        <option value="Training">Training Information</option>
+                        <option value="ContactsDates">
+                          Useful Contacts and Dates
+                        </option>
+                        <option value="UnionGuildContracts">
+                          Union and Guild Contracts
+                        </option>
+                      </select>
+                    </div>
                   </div>
                 </div>
   
-                <form
-                  method="post"
-                  class="mt-8 space-y-2 divide-y divide-gray-200 bg-white rounded-lg py-5 px-4 sm:px-6"
-                  id="inviteMemberForm"
-                  novalidate="novalidate"
-                >
-                  <div>
-                    <div>
-                      <h3 class="text-lg font-medium leading-6 text-federal-blue">
-                        User Information
-                      </h3>
-                      <p class="mt-1 text-sm text-gray-500">
-                        The user will receive a registration link via email.
-                      </p>
-                    </div>
-                  </div>
-  
-                  <div class="space-y-8 divide-y divide-gray-200">
-                    <div class="pt-1">
-                      <div
-                        class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-8"
-                      >
-                        <div class="sm:col-span-3">
-                          <label
-                            class="block text-sm font-medium text-federal-blue"
-                            for="Invite_StudioId"
-                            >Employer</label
+                <form id="saveForm" method="post" class="bg-white rounded-md">
+                  <table
+                    cellspacing="0"
+                    cellpadding="0"
+                    class="k-widget k-editor"
+                    role="presentation"
+                    style="width: 100%; height: 840px"
+                  >
+                    <tbody>
+                      <tr role="presentation">
+                        <td class="k-editor-toolbar-wrap" role="presentation">
+                          <ul
+                            class="k-toolbar k-editor-toolbar"
+                            role="toolbar"
+                            aria-controls="PageContent"
+                            data-role="editortoolbar"
                           >
-                          <div class="mt-1">
-                            <select
-                              autocomplete="none"
-                              class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                              data-val="true"
-                              data-val-required="Studio is required"
-                              id="Invite_StudioId"
-                              name="Invite.StudioId"
+                            <li
+                              class="k-tool-group k-button-group"
+                              role="presentation"
                             >
-                              <option value=""></option>
-                              <option value="2">
-                                20th Century Fox Television
-                              </option>
-                              <option value="1">3 Arts Entertainment</option>
-                              <option value="3">
-                                A&amp;E Television Network
-                              </option>
-                              <option value="4">ABC Studios</option>
-                              <option value="5">ACME Communications</option>
-                              <option value="6">Alloy Entertainment</option>
-                              <option value="41">Alpha Studio</option>
-                              <option value="7">
-                                American Movie Classics (AMC)
-                              </option>
-                              <option value="8">Anonymous Content</option>
-                              <option value="9">Bad Robot</option>
-                              <option value="10">BBC America</option>
-                              <option value="11">Beacon Pictures</option>
-                              <option value="12">Bunim-Murray Productions</option>
-                              <option value="13">Cartoon Network Studios</option>
-                              <option value="14">CBS Studios</option>
-                              <option value="15">CNN</option>
-                              <option value="16">Defined Productions</option>
-                              <option value="17">Dick Clark Productions</option>
-                              <option value="18">eOne Television</option>
-                              <option value="19">Eyeboogie, Inc.</option>
-                              <option value="20">Filmation</option>
-                              <option value="21">Fox Entertainment</option>
-                              <option value="22">FremantleMedia</option>
-                              <option value="23">Global Broadcasting</option>
-                              <option value="24">Home Box Office, Inc.</option>
-                              <option value="38">Junior clerk</option>
-                              <option value="39">
-                                Kathy's Studio Productions
-                              </option>
-                              <option value="25">LIN TV Corporation</option>
-                              <option value="26">Lions Gate Entertainment</option>
-                              <option value="27">Lorimar Television</option>
-                              <option value="28">Metro-Goldwyn-Mayer</option>
-                              <option value="29">
-                                Paramount Television Studios
-                              </option>
-                              <option value="30">Raycom Media</option>
-                              <option value="31">Shine America</option>
-                              <option value="32">Sony Pictures Television</option>
-                              <option value="37">Test Studio</option>
-                              <option value="33">Tribune Entertainment</option>
-                              <option value="34">Universal Television</option>
-                              <option value="35">Walt Disney Television</option>
-                              <option value="36">
-                                Warner Bros. Television Studios
-                              </option>
-                            </select>
-                          </div>
-  
-                          <div
-                            class="field-error-alert-div mt-4 rounded-md bg-red-50 p-4"
-                          >
-                            <div class="flex">
-                              <div class="flex-shrink-0">
-                                <!-- Heroicon name: mini/x-circle -->
-                                <svg
-                                  class="h-5 w-5 text-red-400"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 20 20"
-                                  fill="currentColor"
-                                  aria-hidden="true"
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-start"
+                                title="Bold"
+                                aria-label="Bold"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-bold"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Bold</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool"
+                                title="Italic"
+                                aria-label="Italic"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-italic"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Italic</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool"
+                                title="Underline"
+                                aria-label="Underline"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-underline"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Underline</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-end"
+                                title="Strikethrough"
+                                aria-label="Strikethrough"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-strikethrough"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Strikethrough</span
                                 >
-                                  <path
-                                    fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
-                                    clip-rule="evenodd"
-                                  ></path>
-                                </svg>
-                              </div>
-                              <div class="ml-3">
-                                <h3 class="text-sm font-medium text-red-800">
-                                  <span
-                                    class="field-validation-valid"
-                                    data-valmsg-for="Invite.StudioId"
-                                    data-valmsg-replace="true"
-                                  ></span>
-                                </h3>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="sm:col-span-3 relative flex items-start self-center pt-4"
-                        >
-                          <div class="flex h-5 items-center">
-                            <input
-                              id="is-admin"
-                              name="production-tax-incentive"
-                              type="checkbox"
-                              class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                            />
-                          </div>
-                          <div class="ml-3 text-sm">
-                            <label
-                              for="is-admin"
-                              class="font-medium text-gray-500"
-                              >Administrator</label
+                              </button>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group"
+                              role="presentation"
                             >
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-8"
-                      >
-                        <div class="sm:col-span-3">
-                          <label
-                            class="block text-sm font-medium text-federal-blue"
-                            for="Invite_FullName"
-                            >Full Name</label
-                          >
-                          <div class="mt-1">
-                            <input
-                              type="text"
-                              autocomplete="none"
-                              class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                              data-val="true"
-                              data-val-required="Full name is required"
-                              id="Invite_FullName"
-                              name="Invite.FullName"
-                              value=""
-                            />
-                          </div>
-  
-                          <div
-                            class="field-error-alert-div mt-4 rounded-md bg-red-50 p-4"
-                          >
-                            <div class="flex">
-                              <div class="flex-shrink-0">
-                                <!-- Heroicon name: mini/x-circle -->
-                                <svg
-                                  class="h-5 w-5 text-red-400"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 20 20"
-                                  fill="currentColor"
-                                  aria-hidden="true"
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-start"
+                                title="Undo"
+                                aria-label="Undo"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span class="k-icon k-i-undo"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Undo</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-end"
+                                title="Redo"
+                                aria-label="Redo"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span class="k-icon k-i-redo"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Redo</span
                                 >
-                                  <path
-                                    fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
-                                    clip-rule="evenodd"
-                                  ></path>
-                                </svg>
-                              </div>
-                              <div class="ml-3">
-                                <h3 class="text-sm font-medium text-red-800">
-                                  <span
-                                    class="field-validation-valid"
-                                    data-valmsg-for="Invite.FullName"
-                                    data-valmsg-replace="true"
-                                  ></span>
-                                </h3>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-  
-                        <div class="sm:col-span-2">
-                          <label
-                            class="block text-sm font-medium text-federal-blue"
-                            for="Invite_EmailAddress"
-                            >Email Address</label
-                          >
-                          <div class="mt-1">
-                            <input
-                              type="email"
-                              autocomplete="none"
-                              class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                              data-val="true"
-                              data-val-email="Invalid email address"
-                              data-val-required="Email address is required"
-                              id="Invite_EmailAddress"
-                              name="Invite.EmailAddress"
-                              value=""
-                            />
-                          </div>
-  
-                          <div
-                            class="field-error-alert-div mt-4 rounded-md bg-red-50 p-4"
-                          >
-                            <div class="flex">
-                              <div class="flex-shrink-0">
-                                <!-- Heroicon name: mini/x-circle -->
-                                <svg
-                                  class="h-5 w-5 text-red-400"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 20 20"
-                                  fill="currentColor"
-                                  aria-hidden="true"
+                              </button>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-start"
+                                title="Align text left"
+                                aria-label="Align text left"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-align-left"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Justify Left</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool"
+                                title="Center text"
+                                aria-label="Center text"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-align-center"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Justify Center</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool"
+                                title="Align text right"
+                                aria-label="Align text right"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-align-right"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Justify Right</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-end"
+                                title="Justify"
+                                aria-label="Justify"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-align-justify"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Justify Full
+                                </span>
+                              </button>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-start"
+                                title="Insert unordered list"
+                                aria-label="Insert unordered list"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-list-unordered"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Insert unordered list</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool"
+                                title="Insert ordered list"
+                                aria-label="Insert ordered list"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-list-ordered"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Insert ordered list</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool"
+                                title="Insert upper roman list"
+                                aria-label="Insert upper roman list"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-list-roman-upper"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Insert upper roman list</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool"
+                                title="Insert lower roman list"
+                                aria-label="Insert lower roman list"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-list-roman-lower"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Insert lower roman list</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled"
+                                title="Outdent"
+                                aria-label="Outdent"
+                                unselectable="on"
+                              >
+                                <span class="k-icon k-i-indent-decrease"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Outdent</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-end"
+                                title="Indent"
+                                aria-label="Indent"
+                                unselectable="on"
+                              >
+                                <span class="k-icon k-i-indent-increase"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Indent</span
                                 >
-                                  <path
-                                    fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
-                                    clip-rule="evenodd"
-                                  ></path>
-                                </svg>
-                              </div>
-                              <div class="ml-3">
-                                <h3 class="text-sm font-medium text-red-800">
+                              </button>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-start"
+                                title="Insert hyperlink"
+                                aria-label="Insert hyperlink"
+                                unselectable="on"
+                              >
+                                <span class="k-icon k-i-link-horizontal"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Create Link</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled"
+                                title="Remove hyperlink"
+                                aria-label="Remove hyperlink"
+                                unselectable="on"
+                              >
+                                <span class="k-icon k-i-unlink-horizontal"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Remove Link</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool"
+                                title="Insert image"
+                                aria-label="Insert image"
+                                unselectable="on"
+                              >
+                                <span class="k-icon k-i-image"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Insert Image</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-end"
+                                title="Insert file"
+                                aria-label="Insert file"
+                                unselectable="on"
+                              >
+                                <span class="k-icon k-i-file-add"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Insert File</span
+                                >
+                              </button>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-start"
+                                title="Subscript"
+                                aria-label="Subscript"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-sub-script"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Subscript</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-end"
+                                title="Superscript"
+                                aria-label="Superscript"
+                                unselectable="on"
+                                aria-pressed="false"
+                              >
+                                <span class="k-icon k-i-sup-script"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Superscript</span
+                                >
+                              </button>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group k-hidden k-disabled"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled k-group-start k-group-end"
+                                title="Table Wizard"
+                                aria-label="Table Wizard"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span class="k-icon k-i-table-properties"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Table Wizard</span
+                                >
+                              </button>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-start k-group-end"
+                                data-popup=""
+                                title="Create a table"
+                                aria-label="Create a table"
+                                unselectable="on"
+                              >
+                                <span class="k-icon k-i-table-insert"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Create table</span
+                                >
+                              </button>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group k-hidden k-disabled"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled k-group-start"
+                                title="Add column on the left"
+                                aria-label="Add column on the left"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span
+                                  class="k-icon k-i-table-column-insert-left"
+                                ></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Add column on the left</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled"
+                                title="Add column on the right"
+                                aria-label="Add column on the right"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span
+                                  class="k-icon k-i-table-column-insert-right"
+                                ></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Add column on the right</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled"
+                                title="Add row above"
+                                aria-label="Add row above"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span
+                                  class="k-icon k-i-table-row-insert-above"
+                                ></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Add row above</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled"
+                                title="Add row below"
+                                aria-label="Add row below"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span
+                                  class="k-icon k-i-table-row-insert-below"
+                                ></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Add row below</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled"
+                                title="Delete column"
+                                aria-label="Delete column"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span
+                                  class="k-icon k-i-table-column-delete"
+                                ></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Delete column</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled k-group-end"
+                                title="Delete row"
+                                aria-label="Delete row"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span class="k-icon k-i-table-row-delete"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Delete row</span
+                                >
+                              </button>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group k-hidden k-disabled"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled k-group-start"
+                                title="Merge cells horizontally"
+                                aria-label="Merge cells horizontally"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span
+                                  class="k-icon k-i-cells-merge-horizontally"
+                                ></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Merge Cell Right</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled"
+                                title="Merge cells vertically"
+                                aria-label="Merge cells vertically"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span
+                                  class="k-icon k-i-cells-merge-vertically"
+                                ></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Merge Cell Down</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled"
+                                title="Split cells horizontally"
+                                aria-label="Split cells horizontally"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span
+                                  class="k-icon k-i-cell-split-horizontally"
+                                ></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Split Cell</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled k-group-end"
+                                title="Split cells vertically"
+                                aria-label="Split cells vertically"
+                                unselectable="on"
+                                disabled="disabled"
+                              >
+                                <span
+                                  class="k-icon k-i-cell-split-vertically"
+                                ></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Split Cell</span
+                                >
+                              </button>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group k-hidden k-disabled"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled k-group-start"
+                                title="Table Align Left"
+                                aria-label="Table Align Left"
+                                unselectable="on"
+                                disabled="disabled"
+                                aria-pressed="false"
+                              >
+                                <span
+                                  class="k-icon k-i-table-position-left"
+                                ></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Table Align Left</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled"
+                                title="Table Align Center"
+                                aria-label="Table Align Center"
+                                unselectable="on"
+                                disabled="disabled"
+                                aria-pressed="false"
+                              >
+                                <span
+                                  class="k-icon k-i-table-position-center"
+                                ></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Table Align Center</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-disabled k-group-end"
+                                title="Table Align Right"
+                                aria-label="Table Align Right"
+                                unselectable="on"
+                                disabled="disabled"
+                                aria-pressed="false"
+                              >
+                                <span
+                                  class="k-icon k-i-table-position-right"
+                                ></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Table Align Left</span
+                                >
+                              </button>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-start k-group-end"
+                                title="View HTML"
+                                aria-label="View HTML"
+                                unselectable="on"
+                              >
+                                <span class="k-icon k-i-html"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >View HTML</span
+                                >
+                              </button>
+                            </li>
+                            <li class="k-tool-group" role="presentation">
+                              <span
+                                class="k-editor-dropdown k-group-start k-group-end"
+                                ><span
+                                  title="Format"
+                                  class="k-picker k-dropdownlist k-picker-solid k-picker-md k-rounded-md k-editor-widget"
+                                  style="width: 163.333px"
+                                  unselectable="on"
+                                  role="combobox"
+                                  aria-expanded="false"
+                                  tabindex="0"
+                                  aria-controls="dd110bef-94db-4df5-a118-738c988cdf7d_listbox"
+                                  aria-label="Format"
+                                  aria-disabled="false"
+                                  aria-readonly="false"
+                                  aria-busy="false"
+                                  aria-describedby="ce3cd384-9be2-4cca-81f8-aefbbdba398c"
+                                  ><span
+                                    id="ce3cd384-9be2-4cca-81f8-aefbbdba398c"
+                                    unselectable="on"
+                                    class="k-input-inner"
+                                    ><span
+                                      class="k-input-value-text"
+                                      unselectable="on"
+                                      >Format</span
+                                    ></span
+                                  ><button
+                                    type="button"
+                                    tabindex="-1"
+                                    unselectable="on"
+                                    class="k-input-button k-button k-button-md k-button-solid k-button-solid-base k-icon-button"
+                                    aria-label="select"
+                                  >
+                                    <span
+                                      class="k-icon k-i-arrow-s k-button-icon"
+                                      unselectable="on"
+                                    ></span></button
+                                  ><select
+                                    title="Format"
+                                    aria-label="Format"
+                                    class="k-formatting k-decorated"
+                                    data-role="selectbox"
+                                    style="width: 163.333px; display: none"
+                                    unselectable="on"
+                                  >
+                                    <option value="p">Paragraph</option>
+                                    <option value="blockquote">Quotation</option>
+                                    <option value="h1">Heading 1</option>
+                                    <option value="h2">Heading 2</option>
+                                    <option value="h3">Heading 3</option>
+                                    <option value="h4">Heading 4</option>
+                                    <option value="h5">Heading 5</option>
+                                    <option value="h6">Heading 6</option>
+                                  </select></span
+                                ></span
+                              >
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-start k-group-end"
+                                title="Clean formatting"
+                                aria-label="Clean formatting"
+                                unselectable="on"
+                              >
+                                <span class="k-icon k-i-clear-css"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Clean formatting</span
+                                >
+                              </button>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-start"
+                                title="Copy format"
+                                aria-label="Copy format"
+                                unselectable="on"
+                              >
+                                <span class="k-icon k-i-copy-format"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Copy format</span
+                                ></button
+                              ><button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-end"
+                                title="Apply format"
+                                aria-label="Apply format"
+                                unselectable="on"
+                              >
+                                <span class="k-icon k-i-apply-format"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Apply format</span
+                                >
+                              </button>
+                            </li>
+                            <li class="k-tool-group" role="presentation">
+                              <span
+                                title="Select font family"
+                                class="k-picker k-dropdownlist k-fontName k-picker-solid k-picker-md k-rounded-md k-editor-widget k-group-start"
+                                style=""
+                                unselectable="on"
+                                role="combobox"
+                                aria-expanded="false"
+                                tabindex="0"
+                                aria-controls="daab85fb-2c58-4f6c-8bb4-68ba5e2e0ca8_listbox"
+                                aria-label="Font Name"
+                                aria-disabled="false"
+                                aria-readonly="false"
+                                aria-busy="false"
+                                aria-describedby="f46ba794-4068-4c80-b09c-ee41f31ff579"
+                                ><span
+                                  id="f46ba794-4068-4c80-b09c-ee41f31ff579"
+                                  unselectable="on"
+                                  class="k-input-inner"
+                                  ><span class="k-input-value-text"
+                                    >(inherited font)</span
+                                  ></span
+                                ><button
+                                  type="button"
+                                  tabindex="-1"
+                                  unselectable="on"
+                                  class="k-input-button k-button k-button-md k-button-solid k-button-solid-base k-icon-button"
+                                  aria-label="select"
+                                >
                                   <span
-                                    class="field-validation-valid"
-                                    data-valmsg-for="Invite.EmailAddress"
-                                    data-valmsg-replace="true"
-                                  ></span>
-                                </h3>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                                    class="k-icon k-i-arrow-s k-button-icon"
+                                  ></span></button
+                                ><select
+                                  title="Select font family"
+                                  aria-label="Font Name"
+                                  class="k-fontName k-group-start"
+                                  data-role="dropdownlist"
+                                  style="display: none"
+                                >
+                                  <option value="inherit">
+                                    (inherited font)
+                                  </option>
+                                  <option value="GillSansMTStd">
+                                    Gill Sans MT
+                                  </option>
+                                </select></span
+                              ><span
+                                title="Select font size"
+                                class="k-picker k-dropdownlist k-fontSize k-picker-solid k-picker-md k-rounded-md k-editor-widget k-group-end"
+                                style=""
+                                unselectable="on"
+                                role="combobox"
+                                aria-expanded="false"
+                                tabindex="0"
+                                aria-controls="ea1511e6-f65e-47c8-ad8a-5e5e2eb45806_listbox"
+                                aria-label="Font Size"
+                                aria-disabled="false"
+                                aria-readonly="false"
+                                aria-busy="false"
+                                aria-describedby="cadbf909-76ec-4174-8174-15e706785493"
+                                ><span
+                                  id="cadbf909-76ec-4174-8174-15e706785493"
+                                  unselectable="on"
+                                  class="k-input-inner"
+                                  ><span class="k-input-value-text"
+                                    >(inherited size)</span
+                                  ></span
+                                ><button
+                                  type="button"
+                                  tabindex="-1"
+                                  unselectable="on"
+                                  class="k-input-button k-button k-button-md k-button-solid k-button-solid-base k-icon-button"
+                                  aria-label="select"
+                                >
+                                  <span
+                                    class="k-icon k-i-arrow-s k-button-icon"
+                                  ></span></button
+                                ><select
+                                  title="Select font size"
+                                  aria-label="Font Size"
+                                  class="k-fontSize k-group-end"
+                                  data-role="dropdownlist"
+                                  style="display: none"
+                                >
+                                  <option value="inherit">
+                                    (inherited size)
+                                  </option>
+                                  <option value="xx-small">1 (8pt)</option>
+                                  <option value="x-small">2 (10pt)</option>
+                                  <option value="small">3 (12pt)</option>
+                                  <option value="medium">4 (14pt)</option>
+                                  <option value="large">5 (18pt)</option>
+                                  <option value="x-large">6 (24pt)</option>
+                                  <option value="xx-large">7 (36pt)</option>
+                                </select></span
+                              >
+                            </li>
+                            <li class="k-tool-group" role="presentation">
+                              <span
+                                role="textbox"
+                                aria-haspopup="true"
+                                class="k-colorpicker k-picker k-icon-picker k-picker-solid k-picker-md k-rounded-md k-group-start"
+                                aria-disabled="false"
+                                tabindex="0"
+                                aria-label="Current selected color is rgba(255, 255, 255, 0)"
+                                title="Color"
+                                unselectable="on"
+                                ><span class="k-input-inner" unselectable="on"
+                                  ><span
+                                    class="k-value-icon k-color-preview k-icon-color-preview"
+                                    unselectable="on"
+                                    ><span
+                                      class="k-color-preview-icon k-icon k-icon k-i-foreground-color"
+                                      unselectable="on"
+                                    ></span
+                                    ><span
+                                      class="k-color-preview-mask"
+                                      unselectable="on"
+                                      style="
+                                        background-color: rgba(255, 255, 255, 0);
+                                      "
+                                    ></span></span></span
+                                ><button
+                                  class="k-input-button k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-icon-button"
+                                  unselectable="on"
+                                  aria-label="select"
+                                  tabindex="-1"
+                                  type="button"
+                                >
+                                  <span
+                                    class="k-icon k-i-arrow-s k-button-icon"
+                                    unselectable="on"
+                                  ></span></button
+                                ><input
+                                  class="k-colorpicker k-icon k-i-foreground-color k-group-start"
+                                  data-role="colorpicker"
+                                  style="display: none" /></span
+                              ><span
+                                role="textbox"
+                                aria-haspopup="true"
+                                class="k-colorpicker k-picker k-icon-picker k-picker-solid k-picker-md k-rounded-md k-group-end"
+                                aria-disabled="false"
+                                tabindex="0"
+                                aria-label="Current selected color is rgba(255, 255, 255, 0)"
+                                title="Background color"
+                                unselectable="on"
+                                ><span class="k-input-inner" unselectable="on">
+                                  <span
+                                    class="k-value-icon k-color-preview k-icon-color-preview"
+                                    unselectable="on"
+                                    ><span
+                                      class="k-color-preview-icon k-icon k-icon k-i-paint"
+                                      unselectable="on"
+                                    ></span
+                                    ><span
+                                      class="k-color-preview-mask"
+                                      unselectable="on"
+                                      style="
+                                        background-color: rgba(255, 255, 255, 0);
+                                      "
+                                    ></span></span></span
+                                ><button
+                                  class="k-input-button k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-icon-button"
+                                  unselectable="on"
+                                  aria-label="select"
+                                  tabindex="-1"
+                                  type="button"
+                                >
+                                  <span
+                                    class="k-icon k-i-arrow-s k-button-icon"
+                                    unselectable="on"
+                                  ></span></button
+                                ><input
+                                  class="k-colorpicker k-icon k-i-paint k-group-end"
+                                  data-role="colorpicker"
+                                  style="display: none"
+                              /></span>
+                            </li>
+                            <li
+                              class="k-tool-group k-button-group"
+                              role="presentation"
+                            >
+                              <button
+                                type="button"
+                                tabindex="0"
+                                role="button"
+                                class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-tool k-group-start k-group-end"
+                                title="Print"
+                                aria-label="Print"
+                                unselectable="on"
+                              >
+                                <span class="k-icon k-i-print"></span
+                                ><span class="k-tool-text k-button-text"
+                                  >Print</span
+                                >
+                              </button>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="k-editable-area k-editor-content">
+                          <iframe
+                            title="Editable area. Press F10 for toolbar."
+                            frameborder="0"
+                            class="k-content k-iframe"
+                            tabindex="0"
+                            src=""
+                          >
+                          </iframe>
+                          <textarea
+                            cols="20"
+                            data-val="true"
+                            data-val-required="The PageContent field is required."
+                            id="PageContent"
+                            name="PageContent"
+                            rows="5"
+                            style="width: 100%; height: 840px; display: none"
+                            data-role="editor"
+                            autocomplete="off"
+                            class="k-content k-raw-content"
+                          >
+                          </textarea>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
   
                   <input
                     type="hidden"
+                    value="Home"
                     data-val="true"
-                    data-val-required="The UserType field is required."
-                    id="Invite_UserType"
-                    name="Invite.UserType"
-                    value="Studio"
+                    data-val-required="The ContentPage field is required."
+                    id="ContentPage"
+                    name="ContentPage"
                   />
   
                   <input
                     name="__RequestVerificationToken"
                     type="hidden"
-                    value="CfDJ8NiLLFymghVPvSx63budAdkYksSHiYjMkwZMncjbt6cknagJe6bFN6d1_TaXC5zUM_OBb-S_3LB4Nym5xsAcgu4-ODbilEdSScwRSe_yTMwFrEZ3MgH2TuOvM3twVyhf7QdC1e7Vlp-6b5vr1sixTkpCb2ge0HlMBueQUBpWYw975KHBMo7aSLLbQ5qYIldZ_g"
+                    value="CfDJ8NiLLFymghVPvSx63budAdmZJ98b23dS_ayA1FVeanBomw8CmCVO61_sXZxeDX8UEanj-t5rCxPGjK8QGjYUww66V3DYSDKKfnt2EtH0SVZRZFGpESjcTn_9PSBS4a-_PCUbcRaqBd00DLqcuSyyIpcUj5CQVJlwDcSUlIy6f-KntNqR2g84WKY0wV22_iClCg"
                   />
                 </form>
               </div>

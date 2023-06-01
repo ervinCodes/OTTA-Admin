@@ -1327,6 +1327,10 @@ body::before {
   background-image: url('/Interior/images/blue-button.png');
 }
 
+.bg-\[url\(\'\/Interior\/images\/silver\.png\'\)\] {
+  background-image: url('/Interior/images/silver.png');
+}
+
 .bg-auto {
   background-size: auto;
 }
@@ -2192,6 +2196,10 @@ body::before {
     margin-top: 0px;
   }
 
+  .md\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -2417,6 +2425,14 @@ body::before {
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:ml-4 {
+    margin-left: 1rem;
+  }
+
+  .\32xl\:flex-row {
+    flex-direction: row;
+  }
+
   .\32xl\:pr-10 {
     padding-right: 2.5rem;
   }

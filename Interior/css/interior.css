@@ -746,6 +746,10 @@ body::before {
   margin-top: 0.5rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -760,10 +764,6 @@ body::before {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
 }
 
 .block {
@@ -1008,16 +1008,16 @@ body::before {
   justify-content: space-between;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
 
 .gap-6 {
   gap: 1.5rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .gap-x-2 {
@@ -1307,10 +1307,6 @@ body::before {
   --tw-bg-opacity: 0.75;
 }
 
-.bg-\[url\(\'\/Interior\/images\/blue-button\.png\'\)\] {
-  background-image: url('/Interior/images/blue-button.png');
-}
-
 .bg-\[url\(\'\/images\/blue-button\.png\'\)\] {
   background-image: url('/images/blue-button.png');
 }
@@ -1323,16 +1319,12 @@ body::before {
   background-image: url('/images/blue-stars-bg.jpg');
 }
 
-.bg-\[url\(\'\/interior\/images\/blue-button\.png\'\)\] {
-  background-image: url('/interior/images/blue-button.png');
-}
-
-.bg-\[url\(\'\/Interior\/images\/silver\.png\'\)\] {
-  background-image: url('/Interior/images/silver.png');
-}
-
 .bg-\[url\(\'\/images\/silver\.png\'\)\] {
   background-image: url('/images/silver.png');
+}
+
+.bg-\[url\(\'\/Interior\/images\/blue-button\.png\'\)\] {
+  background-image: url('/Interior/images/blue-button.png');
 }
 
 .bg-auto {
@@ -1461,6 +1453,10 @@ body::before {
   padding-bottom: 1rem;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -1475,6 +1471,10 @@ body::before {
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
 }
 
 .pr-3 {
@@ -1519,14 +1519,6 @@ body::before {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
-
-.pr-10 {
-  padding-right: 2.5rem;
 }
 
 .text-left {
@@ -1581,6 +1573,10 @@ body::before {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[10px\] {
+  font-size: 10px;
 }
 
 .font-bold {
@@ -2126,6 +2122,10 @@ body::before {
     padding-right: 1.5rem;
   }
 
+  .sm\:pb-0 {
+    padding-bottom: 0px;
+  }
+
   .sm\:pl-3 {
     padding-left: 0.75rem;
   }
@@ -2140,10 +2140,6 @@ body::before {
 
   .sm\:pt-3 {
     padding-top: 0.75rem;
-  }
-
-  .sm\:pb-0 {
-    padding-bottom: 0px;
   }
 
   .sm\:text-3xl {
@@ -2381,12 +2377,12 @@ body::before {
 }
 
 @media (min-width: 1280px) {
-  .xl\:mt-1 {
-    margin-top: 0.25rem;
-  }
-
   .xl\:mt-0 {
     margin-top: 0px;
+  }
+
+  .xl\:mt-1 {
+    margin-top: 0.25rem;
   }
 
   .xl\:mt-5 {

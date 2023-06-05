@@ -1537,291 +1537,202 @@
                     <h2
                       class="text-2xl font-thin leading-7 text-white font-gill-sans sm:truncate sm:text-3xl sm:tracking-tight"
                     >
-                      Invite Employer User
+                      System Settings
                     </h2>
                   </div>
                   <div class="mt-4 flex md:mt-0 md:ml-4">
+                    <a
+                      href="/"
+                      class="inline-flex items-center rounded-3xl border border-transparent bg-white px-8 py-2 text-sm font-medium text-dark-gold hover:text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-dark-gold focus:ring-offset-2"
+                      >Cancel</a
+                    >
                     <button
                       id="submitButton"
                       type="button"
-                      class="inline-flex items-center rounded-md border border-dark-gold bg-white-gold px-4 py-2 text-sm font-medium text-dark-gold hover:text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-dark-gold focus:ring-offset-2"
+                      class="ml-3 inline-flex items-center rounded-3xl border border-dark-gold bg-white-gold px-8 py-2 text-sm font-medium text-dark-gold hover:text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-dark-gold focus:ring-offset-2"
                     >
-                      Send Invitation
+                      Save
                     </button>
                   </div>
                 </div>
-  
+                <!-- Container -->
+                <div class="bg-white rounded-lg py-2 px-3 mt-8">
                 <form
                   method="post"
-                  class="mt-8 space-y-2 divide-y divide-gray-200 bg-white rounded-lg py-5 px-4 sm:px-6"
-                  id="inviteMemberForm"
+                  class=" space-y-2 divide-y divide-gray-200"
+                  id="editConfigForm"
                   novalidate="novalidate"
                 >
                   <div>
                     <div>
                       <h3 class="text-lg font-medium leading-6 text-federal-blue">
-                        User Information
+                        Resume PDF Settings
                       </h3>
-                      <p class="mt-1 text-sm text-gray-500">
-                        The user will receive a registration link via email.
-                      </p>
                     </div>
                   </div>
   
                   <div class="space-y-8 divide-y divide-gray-200">
                     <div class="pt-1">
                       <div
-                        class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-8"
+                        class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6"
                       >
-                        <div class="sm:col-span-3">
+                        <div class="sm:col-span-1">
                           <label
                             class="block text-sm font-medium text-federal-blue"
-                            for="Invite_StudioId"
-                            >Employer</label
-                          >
-                          <div class="mt-1">
-                            <select
-                              autocomplete="none"
-                              class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                              data-val="true"
-                              data-val-required="Studio is required"
-                              id="Invite_StudioId"
-                              name="Invite.StudioId"
-                            >
-                              <option value=""></option>
-                              <option value="2">
-                                20th Century Fox Television
-                              </option>
-                              <option value="1">3 Arts Entertainment</option>
-                              <option value="3">
-                                A&amp;E Television Network
-                              </option>
-                              <option value="4">ABC Studios</option>
-                              <option value="5">ACME Communications</option>
-                              <option value="6">Alloy Entertainment</option>
-                              <option value="41">Alpha Studio</option>
-                              <option value="7">
-                                American Movie Classics (AMC)
-                              </option>
-                              <option value="8">Anonymous Content</option>
-                              <option value="9">Bad Robot</option>
-                              <option value="10">BBC America</option>
-                              <option value="11">Beacon Pictures</option>
-                              <option value="12">Bunim-Murray Productions</option>
-                              <option value="13">Cartoon Network Studios</option>
-                              <option value="14">CBS Studios</option>
-                              <option value="15">CNN</option>
-                              <option value="16">Defined Productions</option>
-                              <option value="17">Dick Clark Productions</option>
-                              <option value="18">eOne Television</option>
-                              <option value="19">Eyeboogie, Inc.</option>
-                              <option value="20">Filmation</option>
-                              <option value="21">Fox Entertainment</option>
-                              <option value="22">FremantleMedia</option>
-                              <option value="23">Global Broadcasting</option>
-                              <option value="24">Home Box Office, Inc.</option>
-                              <option value="38">Junior clerk</option>
-                              <option value="39">
-                                Kathy's Studio Productions
-                              </option>
-                              <option value="25">LIN TV Corporation</option>
-                              <option value="26">Lions Gate Entertainment</option>
-                              <option value="27">Lorimar Television</option>
-                              <option value="28">Metro-Goldwyn-Mayer</option>
-                              <option value="29">
-                                Paramount Television Studios
-                              </option>
-                              <option value="30">Raycom Media</option>
-                              <option value="31">Shine America</option>
-                              <option value="32">Sony Pictures Television</option>
-                              <option value="37">Test Studio</option>
-                              <option value="33">Tribune Entertainment</option>
-                              <option value="34">Universal Television</option>
-                              <option value="35">Walt Disney Television</option>
-                              <option value="36">
-                                Warner Bros. Television Studios
-                              </option>
-                            </select>
-                          </div>
-  
-                          <div
-                            class="field-error-alert-div mt-4 rounded-md bg-red-50 p-4"
-                          >
-                            <div class="flex">
-                              <div class="flex-shrink-0">
-                                <!-- Heroicon name: mini/x-circle -->
-                                <svg
-                                  class="h-5 w-5 text-red-400"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 20 20"
-                                  fill="currentColor"
-                                  aria-hidden="true"
-                                >
-                                  <path
-                                    fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
-                                    clip-rule="evenodd"
-                                  ></path>
-                                </svg>
-                              </div>
-                              <div class="ml-3">
-                                <h3 class="text-sm font-medium text-red-800">
-                                  <span
-                                    class="field-validation-valid"
-                                    data-valmsg-for="Invite.StudioId"
-                                    data-valmsg-replace="true"
-                                  ></span>
-                                </h3>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="sm:col-span-3 relative flex items-start self-center pt-4"
-                        >
-                          <div class="flex h-5 items-center">
-                            <input
-                              id="is-admin"
-                              name="production-tax-incentive"
-                              type="checkbox"
-                              class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                            />
-                          </div>
-                          <div class="ml-3 text-sm">
-                            <label
-                              for="is-admin"
-                              class="font-medium text-gray-500"
-                              >Administrator</label
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-8"
-                      >
-                        <div class="sm:col-span-3">
-                          <label
-                            class="block text-sm font-medium text-federal-blue"
-                            for="Invite_FullName"
-                            >Full Name</label
+                            for="Config_TopMargin"
+                            >Top margin</label
                           >
                           <div class="mt-1">
                             <input
-                              type="text"
-                              autocomplete="none"
+                              type="number"
+                              autocomplete="off"
                               class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                               data-val="true"
-                              data-val-required="Full name is required"
-                              id="Invite_FullName"
-                              name="Invite.FullName"
-                              value=""
+                              data-val-number="The field TopMargin must be a number."
+                              data-val-required="The TopMargin field is required."
+                              id="Config_TopMargin"
+                              name="Config.TopMargin"
+                              value="88"
+                            /><input
+                              name="__Invariant"
+                              type="hidden"
+                              value="Config.TopMargin"
                             />
                           </div>
   
-                          <div
-                            class="field-error-alert-div mt-4 rounded-md bg-red-50 p-4"
-                          >
-                            <div class="flex">
-                              <div class="flex-shrink-0">
-                                <!-- Heroicon name: mini/x-circle -->
-                                <svg
-                                  class="h-5 w-5 text-red-400"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 20 20"
-                                  fill="currentColor"
-                                  aria-hidden="true"
-                                >
-                                  <path
-                                    fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
-                                    clip-rule="evenodd"
-                                  ></path>
-                                </svg>
-                              </div>
-                              <div class="ml-3">
-                                <h3 class="text-sm font-medium text-red-800">
-                                  <span
-                                    class="field-validation-valid"
-                                    data-valmsg-for="Invite.FullName"
-                                    data-valmsg-replace="true"
-                                  ></span>
-                                </h3>
-                              </div>
-                            </div>
-                          </div>
+                          <h3 class="text-sm font-medium text-red-800">
+                            <span
+                              class="field-validation-valid"
+                              data-valmsg-for="Config.TopMargin"
+                              data-valmsg-replace="true"
+                            ></span>
+                          </h3>
                         </div>
   
-                        <div class="sm:col-span-2">
+                        <div class="sm:col-span-1">
                           <label
                             class="block text-sm font-medium text-federal-blue"
-                            for="Invite_EmailAddress"
-                            >Email Address</label
+                            for="Config_BottomMargin"
+                            >Bottom margin</label
                           >
                           <div class="mt-1">
                             <input
-                              type="email"
-                              autocomplete="none"
+                              type="number"
+                              autocomplete="off"
                               class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                               data-val="true"
-                              data-val-email="Invalid email address"
-                              data-val-required="Email address is required"
-                              id="Invite_EmailAddress"
-                              name="Invite.EmailAddress"
-                              value=""
+                              data-val-number="The field BottomMargin must be a number."
+                              data-val-required="The BottomMargin field is required."
+                              id="Config_BottomMargin"
+                              name="Config.BottomMargin"
+                              value="50"
+                            /><input
+                              name="__Invariant"
+                              type="hidden"
+                              value="Config.BottomMargin"
                             />
                           </div>
   
-                          <div
-                            class="field-error-alert-div mt-4 rounded-md bg-red-50 p-4"
+                          <h3 class="text-sm font-medium text-red-800">
+                            <span
+                              class="field-validation-valid"
+                              data-valmsg-for="Config.BottomMargin"
+                              data-valmsg-replace="true"
+                            ></span>
+                          </h3>
+                        </div>
+  
+                        <div class="sm:col-span-1">
+                          <label
+                            class="block text-sm font-medium text-federal-blue"
+                            for="Config_LeftMargin"
+                            >Left margin</label
                           >
-                            <div class="flex">
-                              <div class="flex-shrink-0">
-                                <!-- Heroicon name: mini/x-circle -->
-                                <svg
-                                  class="h-5 w-5 text-red-400"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 20 20"
-                                  fill="currentColor"
-                                  aria-hidden="true"
-                                >
-                                  <path
-                                    fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
-                                    clip-rule="evenodd"
-                                  ></path>
-                                </svg>
-                              </div>
-                              <div class="ml-3">
-                                <h3 class="text-sm font-medium text-red-800">
-                                  <span
-                                    class="field-validation-valid"
-                                    data-valmsg-for="Invite.EmailAddress"
-                                    data-valmsg-replace="true"
-                                  ></span>
-                                </h3>
-                              </div>
-                            </div>
+                          <div class="mt-1">
+                            <input
+                              type="number"
+                              autocomplete="off"
+                              class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                              data-val="true"
+                              data-val-number="The field LeftMargin must be a number."
+                              data-val-required="The LeftMargin field is required."
+                              id="Config_LeftMargin"
+                              name="Config.LeftMargin"
+                              value="20"
+                            /><input
+                              name="__Invariant"
+                              type="hidden"
+                              value="Config.LeftMargin"
+                            />
                           </div>
+  
+                          <h3 class="text-sm font-medium text-red-800">
+                            <span
+                              class="field-validation-valid"
+                              data-valmsg-for="Config.LeftMargin"
+                              data-valmsg-replace="true"
+                            ></span>
+                          </h3>
+                        </div>
+  
+                        <div class="sm:col-span-1">
+                          <label
+                            class="block text-sm font-medium text-federal-blue"
+                            for="Config_RightMargin"
+                            >Right margin</label
+                          >
+                          <div class="mt-1">
+                            <input
+                              type="number"
+                              autocomplete="off"
+                              class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                              data-val="true"
+                              data-val-number="The field RightMargin must be a number."
+                              data-val-required="The RightMargin field is required."
+                              id="Config_RightMargin"
+                              name="Config.RightMargin"
+                              value="20"
+                            /><input
+                              name="__Invariant"
+                              type="hidden"
+                              value="Config.RightMargin"
+                            />
+                          </div>
+  
+                          <h3 class="text-sm font-medium text-red-800">
+                            <span
+                              class="field-validation-valid"
+                              data-valmsg-for="Config.RightMargin"
+                              data-valmsg-replace="true"
+                            ></span>
+                          </h3>
                         </div>
                       </div>
                     </div>
                   </div>
   
                   <input
-                    type="hidden"
-                    data-val="true"
-                    data-val-required="The UserType field is required."
-                    id="Invite_UserType"
-                    name="Invite.UserType"
-                    value="Studio"
-                  />
-  
-                  <input
                     name="__RequestVerificationToken"
                     type="hidden"
-                    value="CfDJ8NiLLFymghVPvSx63budAdkYksSHiYjMkwZMncjbt6cknagJe6bFN6d1_TaXC5zUM_OBb-S_3LB4Nym5xsAcgu4-ODbilEdSScwRSe_yTMwFrEZ3MgH2TuOvM3twVyhf7QdC1e7Vlp-6b5vr1sixTkpCb2ge0HlMBueQUBpWYw975KHBMo7aSLLbQ5qYIldZ_g"
+                    value="CfDJ8NiLLFymghVPvSx63budAdmApex3EzUC1cusrM2Rw7WR9voXQ2oWBfWFxnMPLu2a-GphgVSMQsCEYok6340ZuV6RlRZ8K6Cp9Og00dxycdVJR4fkx_2HIvXl5fvdM1JR6j7tJ3Q7Q2sv33NKo6p38lR0WJaHoFoQYRePzKIIDZW3Re0w5TsSPWVvJMFNUw-WUg"
                   />
                 </form>
+  
+                <div class="mt-8">
+                  <h3 class="text-lg font-medium leading-6 text-federal-blue">
+                    Daily Cycle
+                  </h3>
+  
+                  <div class="pt-4">
+                    <a
+                      class="inline-flex items-center rounded-md border border-transparent bg-federal-blue px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-white-gold focus:ring-offset-2"
+                      href="/RunCycle"
+                      >Manually Run Cycle</a
+                    >
+                  </div>
+                </div>
+                </div>
+  
               </div>
             </div>
           </main>

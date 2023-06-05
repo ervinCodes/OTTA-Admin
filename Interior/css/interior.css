@@ -770,6 +770,10 @@ body::before {
   margin-top: 2rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -888,6 +892,18 @@ body::before {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[10rem\] {
+  width: 10rem;
+}
+
+.w-\[20rem\] {
+  width: 20rem;
+}
+
+.w-\[5rem\] {
+  width: 5rem;
 }
 
 .min-w-0 {
@@ -2207,6 +2223,11 @@ body::before {
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .sm\:tracking-tight {

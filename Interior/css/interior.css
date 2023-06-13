@@ -710,6 +710,10 @@ body::before {
   margin-bottom: 0px;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -768,10 +772,6 @@ body::before {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .block {
@@ -886,14 +886,6 @@ body::before {
   width: 2rem;
 }
 
-.w-auto {
-  width: auto;
-}
-
-.w-full {
-  width: 100%;
-}
-
 .w-\[10rem\] {
   width: 10rem;
 }
@@ -904,6 +896,14 @@ body::before {
 
 .w-\[5rem\] {
   width: 5rem;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .min-w-0 {
@@ -1355,6 +1355,18 @@ body::before {
 
 .bg-\[url\(\'\/images\/white-stars-bg\.jpg\'\)\] {
   background-image: url('/images/white-stars-bg.jpg');
+}
+
+.bg-\[url\(\'\/Interior\/images\/transparent-bg-stars\.png\'\)\] {
+  background-image: url('/Interior/images/transparent-bg-stars.png');
+}
+
+.bg-\[url\(\'\/\/images\/transparent-bg-stars\.png\'\)\] {
+  background-image: url('//images/transparent-bg-stars.png');
+}
+
+.bg-\[url\(\'\/images\/transparent-bg-stars\.png\'\)\] {
+  background-image: url('/images/transparent-bg-stars.png');
 }
 
 .bg-auto {
@@ -2127,12 +2139,12 @@ body::before {
     width: 100%;
   }
 
-  .sm\:max-w-none {
-    max-width: none;
-  }
-
   .sm\:max-w-md {
     max-width: 28rem;
+  }
+
+  .sm\:max-w-none {
+    max-width: none;
   }
 
   .sm\:grid-cols-3 {
@@ -2220,14 +2232,14 @@ body::before {
     line-height: 2.25rem;
   }
 
-  .sm\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .sm\:tracking-tight {
